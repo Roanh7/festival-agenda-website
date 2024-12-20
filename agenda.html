@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Festival Agenda 2025</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        header {
+            background: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+        }
+        .logo-container {
+            text-align: center;
+            margin: 0;
+            background-color: #fff; 
+        }
+        .logo-container img {
+            width: 100%; 
+            height: auto; 
+            display: block; 
+        }
+        table {
+            width: 90%;
+            margin: 2rem auto;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            text-align: center;
+            padding: 0.8rem;
+        }
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        tr:hover {
+            background-color: #ddd;
+        }
+        .highlight-green {
+            background-color: #d4edda;
+        }
+        .highlight-yellow {
+            background-color: #fff3cd;
+        }
+    
+        .chart-container {
+            width: 90%; /* Zelfde breedte als de agenda */
+            margin: 2rem auto; /* Zelfde horizontale positie als de agenda */
+            text-align: center;
+        }
+        .chart-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border: 1px solid #ddd;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        footer {
+            text-align: center;
+            margin: 2rem 0;
+            font-size: 0.9rem;
+            color: #666;
+        }
+        .field-container {
+            text-align: center;
+            margin: 2rem auto;
+        }
+        .field-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+        .field {
+            position: relative;
+            width: 90%;
+            max-width: 600px;
+            height: 400px;
+            background-color: #228B22;
+            margin: 0 auto;
+            border: 5px solid white;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+        }
+        .player {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: red;
+            border-radius: 50%;
+            color: white;
+            text-align: center;
+            line-height: 50px;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        .player-name {
+            position: absolute;
+            text-align: center;
+            width: 100px;
+            font-size: 0.9rem;
+            color: white;
+            transform: translate(-50%, 10px);
+        }
+        .goalkeeper { top: 85%; left: 50%; }
+        .defender-left { top: 65%; left: 25%; }
+        .defender-right { top: 65%; left: 75%; }
+        .midfielder { top: 45%; left: 50%; }
+        .striker { top: 15%; left: 50%; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Festival Agenda 2025</h1>
+    </header>
+    <!-- Logo -->
+    <div class="logo-container">
+        <img src="assets/images/logo.png" alt="Festival Logo">
+    </div>
+    <main>
+        <table>
+            <thead>
+                <tr>
+                    <th>Datum</th>
+                    <th>Naam</th>
+                    <th>Locatie</th>
+                    <th>Prijs</th>
+                    <th>Hersteltijd</th>
+                    <th>Chip Scale</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="highlight-green">
+                    <td>21 december 2024</td>
+                    <td>Wavy</td>
+                    <td>Thuisaven, Amsterdam</td>
+                    <td>€ 26,04</td>
+                    <td>119 dagen</td>
+                    <td>5</td>
+                </tr>
+                <tr class="highlight-yellow">
+                    <td>18-20 april 2025</td>
+                    <td>DGTL</td>
+                    <td>NDSM, Amsterdam</td>
+                    <td>€ 90,00</td>
+                    <td>6 dagen</td>
+                    <td>3</td>
+                </tr>
+                <tr class="highlight-green">
+                    <td>26 april 2025</td>
+                    <td>Free your mind Kingsday</td>
+                    <td>Breda International Airport, Bosschenhoofd</td>
+                    <td>€ 33,33</td>
+                    <td>9 dagen</td>
+                    <td>2</td>
+                </tr>
+                <tr class="highlight-yellow">
+                    <td>26 april 2025</td>
+                    <td>Loveland Kingsday</td>
+                    <td>Meerpark, Amsterdam</td>
+                    <td>€ 51,00</td>
+                    <td>9 dagen</td>
+                    <td>4</td>
+                </tr>
+                <tr class="highlight-green">
+                    <td>5 mei 2025</td>
+                    <td>Verbond</td>
+                    <td>Olympisch stadion, Amsterdam</td>
+                    <td>€ 60,00</td>
+                    <td>12 dag</td>
+                    <td>3</td>
+                </tr>
+                <tr class="highlight-yellow">
+                    <td>17-18 mei 2025</td>
+                    <td>Awakenings Upclose</td>
+                    <td>Houtrak Terrein, spaarnwoude</td>
+                    <td>€ 79,95</td>
+                    <td>13 dagen</td>
+                    <td>3</td>
+                </tr>
+                <tr class="highlight-green">
+                    <td>31 mei 2025</td>
+                    <td>Soenda</td>
+                    <td>Ruigenhoekse polder, Utrecht</td>
+                    <td>€ 69,95</td>
+                    <td>7 dagen</td>
+                    <td>4</td>
+                </tr>
+                <tr class="highlight-yellow">
+                    <td>7-8 juni 2025</td>
+                    <td>Open Air</td>
+                    <td>Gaasperpark, Amsterdam</td>
+                    <td>€ 63,00</td>
+                    <td>1 dag</td>
+                    <td>5</td>
+                </tr>
+                <tr class="highlight-green">
+                    <td>7-8 juni 2025</td>
+                    <td>909</td>
+                    <td>Amsterdamse bos, Amsterdam</td>
+                    <td>€ 52,50</td>
+                    <td>6 dagen</td>
+                    <td>3</td>
+                </tr>
+                <tr class="highlight-yellow">
+                    <td>7-8 juni 2025</td>
+                    <td>Free Your Mind</td>
+                    <td>Stadsblokken, Arnhem</td>
+                    <td>€ 54,75</td>
+                    <td>6 dagen</td>
+                    <td>3</td>
+                </tr>
+                <tr class="highlight-green">
+                <td>14 juni 2025</td>
+                <td>Mystic Garden Festival</td>
+                <td>Sloterpark, Amsterdam</td>
+                <td>€ 85,00</td>
+                <td>27 dagen</td>
+                <td>4</td>
+            </tr>
+            <tr class="highlight-yellow">
+                <td>11-13 juli 2025</td>
+                <td>Awakenings Festival</td>
+                <td>Beekse Bergen, Hilvarenbeek</td>
+                <td>€ 109,00</td>
+                <td>5 dagen</td>
+                <td>4</td>
+            </tr>
+            <tr class="highlight-green">
+                <td>18-27 juli 2025</td>
+                <td>Tomorrowland</td>
+                <td>Boom, België</td>
+                <td>€ 105,00</td>
+                <td>4 dagen</td>
+                <td>5</td>
+            </tr>
+            <tr class="highlight-green">
+                <td>22-24 juli 2025</td>
+                <td>Mysteryland</td>
+                <td>Floriadeterrein, Haarlemmermeer</td>
+                <td>€ 119,95</td>
+                <td>16 dagen</td>
+                <td>3</td>
+            </tr>
+            <tr class="highlight-green">
+                <td>9-10 augustus 2025</td>
+                <td>Loveland</td>
+                <td>Sloterpark, Amsterdam</td>
+                <td>€ 82,50</td>
+                <td>7 dagen</td>
+                <td>5</td>
+            </tr>
+            <tr class="highlight-yellow">
+                <td>To be announced</td>
+                <td>Strafwerk</td>
+                <td>Havenpark, Amsterdam</td>
+                <td>€ ?</td>
+                <td>27 dagen</td>
+                <td>5</td>
+            </tr>
+            <tr class="highlight-green">
+                <td>13-14 september 2025</td>
+                <td>Parels van de stad</td>
+                <td>Riekerhaven, Amsterdam</td>
+                <td>€ 36,00</td>
+                <td>5 dagen</td>
+                <td>5</td>
+            </tr>
+            <tr class="highlight-yellow">
+                <td>19-20 september</td>
+                <td>Into the woods</td>
+                <td>Openluchttheater, Amersfoort</td>
+                <td>€ 53,00</td>
+                <td>END OF SEASON</td>
+                <td>4</td>
+            </tr>
+            </tbody>
+        </table>
+        <div class="chart-container"></div>
+            <h2>Ticketprijzen per Maand</h2>
+            <img src="assets/images/chart.png" alt="Staafgrafiek van Ticketprijzen">
+        </div>
+       
+        <div class="field-container">
+            <div class="field-title">S-TEAM Opstelling</div>
+            <div class="field">
+                <div class="player goalkeeper">1</div>
+                <div class="player-name" style="top: 92%; left: 50%;">Roan</div>
+                <div class="player defender-left">3</div>
+                <div class="player-name" style="top: 72%; left: 25%;">Muc</div>
+                <div class="player defender-right">5</div>
+                <div class="player-name" style="top: 72%; left: 75%;">Rick</div>
+                <div class="player midfielder">10</div>
+                <div class="player-name" style="top: 52%; left: 50%;">Chip</div>
+                <div class="player striker">9</div>
+                <div class="player-name" style="top: 22%; left: 50%;">Jef</div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2025 Festival Agenda - Gecreëerd door Roan Hassan, S-team vertegenwoordiger</p>
+    </footer>
+</body>
+</html>
