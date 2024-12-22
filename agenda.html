@@ -32,6 +32,7 @@
             width: 90%;
             margin: 2rem auto;
             border-collapse: collapse;
+            min-width: 600px; /* Voor scrollen op kleine schermen */
         }
         th, td {
             border: 1px solid #ddd;
@@ -125,6 +126,43 @@
     .reviews-link:hover {
         background-color: #45a049;
     }
+
+    @media (max-width: 768px) {
+            .field {
+                height: 300px;
+            }
+            .player {
+                width: 40px;
+                height: 40px;
+                font-size: 1rem;
+                line-height: 40px;
+            }
+            .table-container {
+                padding: 0 1rem;
+            }
+            table {
+                width: 100%;
+                margin: 1rem auto;
+            }
+            th, td {
+                padding: 0.5rem;
+                font-size: 0.9rem;
+            }
+        }
+        @media (max-width: 480px) {
+            header {
+                font-size: 1rem;
+            }
+            .field {
+                height: 200px;
+            }
+            .player {
+                width: 30px;
+                height: 30px;
+                font-size: 0.8rem;
+                line-height: 30px;
+            }
+        }
     </style>
 </head>
 <body>
