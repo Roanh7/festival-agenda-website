@@ -5,14 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Festival Agenda 2025</title>
     <style>
+        /* Algemene reset */
         * {
             margin: 0;
             padding: 0;
-            box-sizing: border-box; 
+            box-sizing: border-box; /* Zorg dat borders en paddings binnen de breedte vallen */
         }
         html, body {
             width: 100%;
-            overflow-x: hidden; 
+            overflow-x: hidden; /* Voorkom horizontale scrollbalken */
             background-color: #f9f9f9;
             color: #333;
         }
@@ -22,12 +23,12 @@
             text-align: center;
             padding: 1rem 0;
             font-size: 2rem;
-            width: 100%; 
+            width: 100%; /* Zorgt ervoor dat de header altijd de volledige breedte inneemt */
         }
         .logo-container {
             text-align: center;
             margin: 1rem auto;
-            width: 90%; 
+            width: 90%; /* Zelfde breedte als andere containers */
             max-width: 1200px;
         }
         .logo-container img {
@@ -36,30 +37,23 @@
             display: block;
         }
         .table-container {
-            width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    overflow-x: auto; /* Scrollen toestaan op kleine schermen */
-    background-color: white;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
+            width: 90%; /* Breedte consistent met andere secties */
+            max-width: 1200px;
+            margin: 0 auto;
+            overflow-x: auto; /* Scrollbaarheid voor kleinere schermen */
         }
         table {
             width: 100%;
-    border-collapse: collapse;
-    table-layout: auto;
+            border-collapse: collapse;
         }
         th, td {
             border: 1px solid #ddd;
-    text-align: center;
-    padding: 0.8rem;
-    font-size: 1rem;
-    word-wrap: break-word;
+            text-align: center;
+            padding: 0.8rem;
         }
         th {
             background-color: #4CAF50;
-    color: white;
-    font-size: 1rem;
+            color: white;
         }
         tr:nth-child(even) {
             background-color: #f2f2f2;
@@ -79,8 +73,113 @@
             font-size: 0.9rem;
             color: #666;
         }
-        
-        .field-container {
+        /* Media queries voor responsiviteit */
+        @media (max-width: 768px) {
+            header {
+                font-size: 1.5rem; /* Verklein de tekst voor tablets */
+                padding: 0.8rem;
+            }
+            .logo-container {
+                width: 95%; /* Zorg dat de container goed schaalt */
+            }
+            .table-container {
+                width: 95%;
+            }
+            .field-container {
+                width: 95%;
+            }
+            .reviews-link-container {
+                width: 95%;
+            }
+        }
+        @media (max-width: 480px) {
+            header {
+                font-size: 1.2rem; /* Verklein de tekst voor smartphones */
+                padding: 0.5rem;
+            }
+            .logo-container img {
+                width: 100%;
+            }
+            th, td {
+                font-size: 0.8rem;
+                padding: 0.4rem;
+            }
+        }
+        .bank-container {
+    text-align: center;
+    margin: 2rem auto;
+    width: 90%;
+    max-width: 600px; 
+}
+.bank-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #333;
+    text-decoration: underline;
+}
+.bank-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+.bank-player {
+    font-size: 1rem;
+    color: #555;
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+.bank-player:hover {
+    background-color: #f2f2f2;
+}
+
+.download-link-container {
+    text-align: center;
+    margin: 1rem auto;
+    width: 90%;
+    max-width: 1200px;
+}
+
+.download-link {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 1rem;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.download-link:hover {
+    background-color: #45a049;
+}
+.extra-info-link-container {
+    text-align: center;
+    margin: 1rem auto;
+    width: 90%;
+    max-width: 1200px;
+}
+
+.extra-info-link {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 1rem;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.extra-info-link:hover {
+    background-color: #45a049;
+}
+.field-container {
             text-align: center;
             margin: 2rem auto;
             width: 90%; 
@@ -126,7 +225,7 @@
         .defender-right { top: 65%; left: 75%; }
         .midfielder { top: 45%; left: 50%; }
         .striker { top: 15%; left: 50%; }
-
+       
         .reviews-link-container {
             text-align: center;
             margin: 2rem auto;
@@ -146,127 +245,6 @@
         .reviews-link:hover {
             background-color: #45a049;
         }
-
-        @media (max-width: 768px) {
-            header {
-                font-size: 1.5rem; 
-                padding: 0.8rem;
-            }
-            .logo-container {
-                width: 95%; 
-            }
-            .table-container {
-                width: 95%;
-            }
-            .field-container {
-                width: 95%;
-            }
-            .reviews-link-container {
-                width: 95%;
-            }
-        }
-        @media (max-width: 480px) {
-            header {
-                font-size: 1.2rem; 
-                padding: 0.5rem;
-            }
-            .logo-container img {
-                width: 100%;
-            }
-            th, td {
-                font-size: 0.8rem;
-                padding: 0.4rem;
-            }}
-            @media (max-width: 480px) {
-        .table-container {
-            overflow-x: auto; /* Scrollen toestaan */
-        }
-        table {
-            font-size: 0.8rem;
-            min-width: 600px; /* Minimum breedte om alle kolommen te tonen */
-        }
-        th, td {
-            padding: 0.5rem; /* Kleiner maken voor ruimtebesparing */
-        }
-        th {
-            font-size: 0.9rem;
-        }
-    }
-      
-.bank-container {
-    text-align: center;
-    margin: 2rem auto;
-    width: 90%;
-    max-width: 600px; 
-}
-.bank-title {
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin-bottom: 1rem;
-    color: #333;
-    text-decoration: underline;
-}
-.bank-list {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-.bank-player {
-    font-size: 1rem;
-    color: #555;
-    margin: 0.5rem 0;
-    padding: 0.5rem;
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-}
-.bank-player:hover {
-    background-color: #f2f2f2;
-}
-.download-link-container {
-    text-align: center;
-    margin: 1rem auto;
-    width: 90%;
-    max-width: 1200px;
-}
-
-.download-link {
-    display: inline-block;
-    padding: 0.8rem 1.5rem;
-    background-color: #4CAF50;
-    color: white;
-    font-size: 1rem;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-.download-link:hover {
-    background-color: #45a049;
-}
-.extra-info-link-container {
-    text-align: center;
-    margin: 1rem auto;
-    width: 90%;
-    max-width: 1200px;
-}
-
-.extra-info-link {
-    display: inline-block;
-    padding: 0.8rem 1.5rem;
-    background-color: #4CAF50;
-    color: white;
-    font-size: 1rem;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-.extra-info-link:hover {
-    background-color: #45a049;
-}
-
     </style>
 </head>
 </head>
@@ -274,11 +252,11 @@
     <header>
         <h1>Festival Agenda 2025</h1>
     </header>
-  
+    <!-- Logo -->
     <div class="logo-container">
         <img src="images/logo.png" alt="Festival Logo">
     </div>
-    <main>
+   <main>
         <table>
             <thead>
                 <tr>
@@ -520,7 +498,7 @@
         </div>
     </main>
     <footer>
-        <p>&copy; 2025 Festival Agenda - Gecreëerd door Roan Hassan, S-team vertegenwoordiger</p>
+        <p>&copy; 2025 Festival Agenda - Gecreëerd door Roan Hassan</p>
     </footer>
 </body>
-</html>
+</html
