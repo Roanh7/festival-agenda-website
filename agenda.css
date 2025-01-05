@@ -125,6 +125,19 @@ table {
       overflow: hidden;
   }
 }
+/* Zorg ervoor dat alleen de tabel horizontaal scrolbaar is */
+.table-container {
+  width: 100%; /* Gebruik de volledige breedte van de pagina */
+  overflow-x: auto; /* Voeg horizontale scroll toe */
+  margin: 1rem auto; /* Voeg wat ruimte rondom de container toe */
+}
+
+table {
+  width: 100%; /* Zorg ervoor dat de tabel zijn oorspronkelijke breedte behoudt */
+  border-collapse: collapse;
+  min-width: 1000px; /* Stel een minimale breedte in voor de tabel */
+}
+
 .field-container {
     text-align: center;
     margin: 2rem auto;
