@@ -1,14 +1,14 @@
+/* Zorg ervoor dat alleen de tabel scrollbaar is */
 #scoreboard-container {
-  width: 90%;
-  margin: 2rem auto;
-  max-width: 600px;
-  font-family: Arial, sans-serif;
+  overflow-x: auto; /* Horizontale scrollbalk */
+  margin: 0 auto;
+  max-width: 100%; /* Zorgt ervoor dat de container niet breder wordt dan het scherm */
 }
 
 #scoreboard {
-  width: 100%;
+  width: 100%; /* Zorg ervoor dat de tabel breed genoeg blijft */
+  min-width: 600px; /* Stel een minimale breedte in */
   border-collapse: collapse;
-  margin-bottom: 2rem;
 }
 
 #scoreboard th, #scoreboard td {
@@ -63,23 +63,4 @@
   width: 100%; 
   height: auto; 
   display: block; 
-}
-#back-button-container {
-  text-align: center;
-  margin: 2rem 0;
-}
-
-.back-button {
-  display: inline-block;
-  padding: 0.8rem 1.5rem;
-  background-color: #4CAF50;
-  color: white;
-  font-size: 1rem;
-  text-decoration: none;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
-}
-
-.back-button:hover {
-  background-color: #45a049;
 }
