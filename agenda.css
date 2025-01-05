@@ -92,50 +92,37 @@ footer {
         width: 95%;
     }
 }
+/* Algemeen: Compacte tabelweergave */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed; /* Dwing gelijke kolombreedtes af */
+}
+
+/* Kolommen kleiner maken op mobiel */
 @media (max-width: 768px) {
   th, td {
-      font-size: 0.9rem; /* Kleinere tekstgrootte */
-      padding: 0.5rem;
+      font-size: 0.9rem; /* Verklein de tekst */
+      padding: 0.5rem; /* Minder padding */
   }
-}
 
-@media (max-width: 768px) {
-  th, td {
-      font-size: 0.8rem; /* Verklein de tekstgrootte */
-      padding: 0.5rem; /* Minder padding voor kleinere schermen */
-  }
-  table {
-      table-layout: fixed; /* Forceer kolommen om een vaste breedte te gebruiken */
-      width: 100%;
-  }
-  th, td {
-      white-space: nowrap; /* Voorkom dat tekst meerdere regels inneemt */
-      overflow: hidden; /* Snijd overtollige tekst af */
-      text-overflow: ellipsis; /* Voeg "..." toe bij lange tekst */
-  }
-}
-
-@media (max-width: 480px) {
-  th, td {
-      font-size: 0.7rem; /* Nog kleinere tekst voor smartphones */
-      padding: 0.3rem; /* Verklein padding nog meer */
-  }
-  table {
-      table-layout: fixed;
-      width: 100%;
-  }
-  th, td {
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-  }
-}
-
-/* Kolom prioriteiten voor zichtbaarheid */
-@media (max-width: 480px) {
   th:nth-child(6), td:nth-child(6), /* Hersteltijd */
   th:nth-child(7), td:nth-child(7) /* Chip Scale */ {
-      display: table-cell; /* Zorg ervoor dat Hersteltijd en Chip Scale zichtbaar blijven */
+      display: table-cell; /* Zorg dat deze kolommen zichtbaar blijven */
+  }
+}
+
+@media (max-width: 480px) {
+  th, td {
+      font-size: 0.8rem; /* Nog kleinere tekst voor kleine schermen */
+      padding: 0.3rem;
+  }
+
+  /* Kolombreedtes specifiek instellen */
+  th, td {
+      white-space: nowrap; /* Voorkom dat tekst meerdere regels inneemt */
+      text-overflow: ellipsis; /* Voeg "..." toe bij lange tekst */
+      overflow: hidden;
   }
 }
 .field-container {
