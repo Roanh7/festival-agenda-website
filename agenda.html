@@ -5,15 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Festival Agenda 2025</title>
     <style>
-        /* Algemene reset */
         * {
             margin: 0;
             padding: 0;
-            box-sizing: border-box; /* Zorg dat borders en paddings binnen de breedte vallen */
+            box-sizing: border-box; 
         }
         html, body {
             width: 100%;
-            overflow-x: hidden; /* Voorkom horizontale scrollbalken */
+            overflow-x: hidden; 
             background-color: #f9f9f9;
             color: #333;
         }
@@ -23,12 +22,12 @@
             text-align: center;
             padding: 1rem 0;
             font-size: 2rem;
-            width: 100%; /* Zorgt ervoor dat de header altijd de volledige breedte inneemt */
+            width: 100%; 
         }
         .logo-container {
             text-align: center;
             margin: 1rem auto;
-            width: 90%; /* Zelfde breedte als andere containers */
+            width: 90%; 
             max-width: 1200px;
         }
         .logo-container img {
@@ -37,23 +36,30 @@
             display: block;
         }
         .table-container {
-            width: 90%; /* Breedte consistent met andere secties */
-            max-width: 1200px;
-            margin: 0 auto;
-            overflow-x: auto; /* Scrollbaarheid voor kleinere schermen */
+            width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow-x: auto; /* Scrollen toestaan op kleine schermen */
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
         }
         table {
             width: 100%;
-            border-collapse: collapse;
+    border-collapse: collapse;
+    table-layout: auto;
         }
         th, td {
             border: 1px solid #ddd;
-            text-align: center;
-            padding: 0.8rem;
+    text-align: center;
+    padding: 0.8rem;
+    font-size: 1rem;
+    word-wrap: break-word;
         }
         th {
             background-color: #4CAF50;
-            color: white;
+    color: white;
+    font-size: 1rem;
         }
         tr:nth-child(even) {
             background-color: #f2f2f2;
@@ -73,10 +79,11 @@
             font-size: 0.9rem;
             color: #666;
         }
+        
         .field-container {
             text-align: center;
             margin: 2rem auto;
-            width: 90%; /* Zelfde breedte als de tabel */
+            width: 90%; 
             max-width: 1200px;
         }
         .field-title {
@@ -140,14 +147,13 @@
             background-color: #45a049;
         }
 
-        /* Media queries voor responsiviteit */
         @media (max-width: 768px) {
             header {
-                font-size: 1.5rem; /* Verklein de tekst voor tablets */
+                font-size: 1.5rem; 
                 padding: 0.8rem;
             }
             .logo-container {
-                width: 95%; /* Zorg dat de container goed schaalt */
+                width: 95%; 
             }
             .table-container {
                 width: 95%;
@@ -161,7 +167,7 @@
         }
         @media (max-width: 480px) {
             header {
-                font-size: 1.2rem; /* Verklein de tekst voor smartphones */
+                font-size: 1.2rem; 
                 padding: 0.5rem;
             }
             .logo-container img {
@@ -170,14 +176,24 @@
             th, td {
                 font-size: 0.8rem;
                 padding: 0.4rem;
-            }
+            }}
+     @media (max-width: 480px) {
+    th, td {
+        font-size: 0.8rem;
+        padding: 0.5rem;
+    }
+
+    table {
+        font-size: 0.8rem;
+    }
+
         }
-        /* Bank sectie */
+      
 .bank-container {
     text-align: center;
     margin: 2rem auto;
     width: 90%;
-    max-width: 600px; /* Zelfde breedte als de field */
+    max-width: 600px; 
 }
 .bank-title {
     font-size: 1.5rem;
@@ -204,6 +220,49 @@
 .bank-player:hover {
     background-color: #f2f2f2;
 }
+.download-link-container {
+    text-align: center;
+    margin: 1rem auto;
+    width: 90%;
+    max-width: 1200px;
+}
+
+.download-link {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 1rem;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.download-link:hover {
+    background-color: #45a049;
+}
+.extra-info-link-container {
+    text-align: center;
+    margin: 1rem auto;
+    width: 90%;
+    max-width: 1200px;
+}
+
+.extra-info-link {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 1rem;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.extra-info-link:hover {
+    background-color: #45a049;
+}
+
     </style>
 </head>
 </head>
@@ -211,7 +270,7 @@
     <header>
         <h1>Festival Agenda 2025</h1>
     </header>
-    <!-- Logo -->
+  
     <div class="logo-container">
         <img src="images/logo.png" alt="Festival Logo">
     </div>
@@ -219,6 +278,7 @@
         <table>
             <thead>
                 <tr>
+                    <th>nr.</th>
                     <th>Datum</th>
                     <th>Naam</th>
                     <th>Locatie</th>
@@ -229,6 +289,7 @@
             </thead>
             <body>
                 <tr class="highlight-green">
+                    <td>1</td>
                     <td>21 december 2024</td>
                     <td>Wavy</td>
                     <td>Thuisaven, Amsterdam</td>
@@ -237,6 +298,7 @@
                     <td>5</td>
                 </tr>
                 <tr class="highlight-yellow">
+                    <td>2</td>
                     <td>18-20 april 2025</td>
                     <td>DGTL</td>
                     <td>NDSM, Amsterdam</td>
@@ -245,6 +307,7 @@
                     <td>3</td>
                 </tr>
                 <tr class="highlight-green">
+                    <td>3</td>
                     <td>26 april 2025</td>
                     <td>Free your mind Kingsday</td>
                     <td>Breda International Airport, Bosschenhoofd</td>
@@ -253,6 +316,7 @@
                     <td>2</td>
                 </tr>
                 <tr class="highlight-yellow">
+                    <td>4</td>
                     <td>26 april 2025</td>
                     <td>Loveland Kingsday</td>
                     <td>Meerpark, Amsterdam</td>
@@ -261,6 +325,7 @@
                     <td>4</td>
                 </tr>
                 <tr class="highlight-green">
+                    <td>5</td>
                     <td>5 mei 2025</td>
                     <td>Verbond</td>
                     <td>Olympisch stadion, Amsterdam</td>
@@ -269,6 +334,7 @@
                     <td>3</td>
                 </tr>
                 <tr class="highlight-yellow">
+                    <td>6</td>
                     <td>17-18 mei 2025</td>
                     <td>Awakenings Upclose</td>
                     <td>Spaarnwoude, Amsterdam</td>
@@ -277,6 +343,7 @@
                     <td>3</td>
                 </tr>
                 <tr class="highlight-green">
+                    <td>7</td>
                     <td>31 mei 2025</td>
                     <td>Soenda</td>
                     <td>Ruigenhoekse polder, Utrecht</td>
@@ -285,6 +352,7 @@
                     <td>4</td>
                 </tr>
                 <tr class="highlight-yellow">
+                    <td>8</td>
                     <td>7-8 juni 2025</td>
                     <td>Open Air</td>
                     <td>Gaasperpark, Amsterdam</td>
@@ -293,6 +361,7 @@
                     <td>5</td>
                 </tr>
                 <tr class="highlight-green">
+                    <td>9</td>
                     <td>7-8 juni 2025</td>
                     <td>909</td>
                     <td>Amsterdamse bos, Amsterdam</td>
@@ -301,14 +370,16 @@
                     <td>3</td>
                 </tr>
                 <tr class="highlight-yellow">
+                    <td>10</td>
                     <td>7-8 juni 2025</td>
                     <td>Free Your Mind</td>
                     <td>Stadsblokken, Arnhem</td>
                     <td>€ 54,75</td>
                     <td>6 dagen</td>
-                    <td>3</td>
+                    <td>2</td>
                 </tr>
                 <tr class="highlight-green">
+                    <td>11</td>
                 <td>14 juni 2025</td>
                 <td>Mystic Garden Festival</td>
                 <td>Sloterpark, Amsterdam</td>
@@ -317,6 +388,7 @@
                 <td>4</td>
             </tr>
             <tr class="highlight-yellow">
+                <td>12</td>
                 <td>11-13 juli 2025</td>
                 <td>Awakenings Festival</td>
                 <td>Beekse Bergen, Hilvarenbeek</td>
@@ -325,6 +397,7 @@
                 <td>4</td>
             </tr>
             <tr class="highlight-green">
+                <td>13</td>
                 <td>18-27 juli 2025</td>
                 <td>Tomorrowland</td>
                 <td>Boom, België</td>
@@ -333,6 +406,7 @@
                 <td>5</td>
             </tr>
             <tr class="highlight-green">
+                <td>14</td>
                 <td>22-24 juli 2025</td>
                 <td>Mysteryland</td>
                 <td>Floriadeterrein, Haarlemmermeer</td>
@@ -341,6 +415,7 @@
                 <td>3</td>
             </tr>
              <tr class="highlight-green">
+                    <td>15</td>
                     <td>26 juli 2025</td>
                     <td>No art</td>
                     <td>Flevopark, Amsterdam</td>
@@ -350,6 +425,7 @@
                  </tr>
 
                  <tr class="highlight-yellow">
+                    <td>16</td>
                     <td>9-10 augustus 2025</td>
                     <td>Loveland</td>
                     <td>Sloterpark, Amsterdam</td>
@@ -358,6 +434,7 @@
                     <td>5</td>
                 </tr>
                 <tr class="highlight-green">
+                    <td>17</td>
                     <td>17 augustus 2025</td>
                     <td>Latin Village</td>
                     <td>Spaarnwoude, Amsterdam</td>
@@ -366,6 +443,7 @@
                     <td>5</td>
                 </tr>
             <tr class="highlight-yellow">
+                <td>18</td>
                 <td>To be announced</td>
                 <td>Strafwerk</td>
                 <td>Havenpark, Amsterdam</td>
@@ -374,6 +452,7 @@
                 <td>5</td>
             </tr>
             <tr class="highlight-green">
+                <td>19</td>
                 <td>13-14 september 2025</td>
                 <td>Parels van de stad</td>
                 <td>Riekerhaven, Amsterdam</td>
@@ -382,6 +461,7 @@
                 <td>5</td>
             </tr>
             <tr class="highlight-green">
+                <td>20</td>
                 <td>19-20 september</td>
                 <td>Into the woods</td>
                 <td>Openluchttheater, Amersfoort</td>
@@ -427,6 +507,12 @@
         </div>
         <div class="reviews-link-container">
             <a href="reviews.html" class="reviews-link">Bekijk festival reviews</a>
+        </div>
+        <div class="extra-info-link-container">
+            <a href="extra-info.html" class="extra-info-link">Extra Info</a>
+        </div>
+        <div class="download-link-container">
+            <a href="agenda2025.pdf" class="download-link" download>Download hier PDF</a>
         </div>
     </main>
     <footer>
