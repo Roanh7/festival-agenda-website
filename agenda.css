@@ -31,23 +31,29 @@ header {
     display: block;
 }
 .table-container {
-    width: 90%; /* Breedte consistent met andere secties */
-    max-width: 1200px;
-    margin: 0 auto;
-    overflow-x: auto; /* Scrollbaarheid voor kleinere schermen */
+  width: 90%; /* Breedte consistent met andere secties */
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow-x: auto; /* Zorg voor horizontale scrollbaarheid */
+  display: block; /* Zorgt ervoor dat het werkt op mobiele apparaten */
 }
+
 table {
-    width: 100%;
-    border-collapse: collapse;
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 600px; /* Zorg ervoor dat de tabel niet te smal wordt */
 }
+
 th, td {
-    border: 1px solid #ddd;
-    text-align: center;
-    padding: 0.8rem;
+  border: 1px solid #ddd;
+  text-align: center;
+  padding: 0.8rem;
+  word-wrap: break-word; /* Zorg dat de tekst netjes afbreekt */
 }
+
 th {
-    background-color: #4CAF50;
-    color: white;
+  background-color: #4CAF50;
+  color: white;
 }
 tr:nth-child(even) {
     background-color: #f2f2f2;
@@ -86,18 +92,51 @@ footer {
         width: 95%;
     }
 }
+@media (max-width: 768px) {
+  th, td {
+      font-size: 0.9rem; /* Kleinere tekstgrootte */
+      padding: 0.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  th, td {
+      font-size: 0.8rem; /* Verklein de tekstgrootte */
+      padding: 0.5rem; /* Minder padding voor kleinere schermen */
+  }
+  table {
+      table-layout: fixed; /* Forceer kolommen om een vaste breedte te gebruiken */
+      width: 100%;
+  }
+  th, td {
+      white-space: nowrap; /* Voorkom dat tekst meerdere regels inneemt */
+      overflow: hidden; /* Snijd overtollige tekst af */
+      text-overflow: ellipsis; /* Voeg "..." toe bij lange tekst */
+  }
+}
+
 @media (max-width: 480px) {
-    header {
-        font-size: 1.2rem; /* Verklein de tekst voor smartphones */
-        padding: 0.5rem;
-    }
-    .logo-container img {
-        width: 100%;
-    }
-    th, td {
-        font-size: 0.8rem;
-        padding: 0.4rem;
-    }
+  th, td {
+      font-size: 0.7rem; /* Nog kleinere tekst voor smartphones */
+      padding: 0.3rem; /* Verklein padding nog meer */
+  }
+  table {
+      table-layout: fixed;
+      width: 100%;
+  }
+  th, td {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+  }
+}
+
+/* Kolom prioriteiten voor zichtbaarheid */
+@media (max-width: 480px) {
+  th:nth-child(6), td:nth-child(6), /* Hersteltijd */
+  th:nth-child(7), td:nth-child(7) /* Chip Scale */ {
+      display: table-cell; /* Zorg ervoor dat Hersteltijd en Chip Scale zichtbaar blijven */
+  }
 }
 .field-container {
     text-align: center;
@@ -237,4 +276,24 @@ transition: background-color 0.3s ease;
 
 .extra-info-link:hover {
 background-color: #45a049;
+}
+
+#countdown-container {
+  text-align: center;
+  margin: 2rem auto;
+  padding: 1rem;
+  background-color: #f4f4f4;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  max-width: 600px;
+  font-family: Arial, sans-serif;
+}
+#countdown-container h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+#countdown {
+  font-size: 1.2rem;
+  color: #4CAF50;
+  font-weight: bold;
 }
