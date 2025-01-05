@@ -297,3 +297,26 @@ background-color: #45a049;
   color: #4CAF50;
   font-weight: bold;
 }
+@media (max-width: 480px) {
+  #countdown-container {
+      font-size: 0.9rem; /* Verklein tekst voor mobiel */
+      padding: 0.5rem;
+  }
+  #countdown {
+      font-size: 0.8rem;
+  }
+  #festival-name {
+      font-size: 1rem;
+  }
+}
+body {
+  width: 100%;
+  overflow-x: hidden; /* Vermijd horizontaal scrollen */
+}
+
+#countdown-container {
+  text-align: center;
+  width: 90%;
+  margin: 1rem auto;
+  max-width: 600px;
+}
