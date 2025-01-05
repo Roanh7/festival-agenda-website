@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tussenstand</title>
+    <link rel="stylesheet" href="agenda.css">
+</head>
+<body>
+    <header>
+        <h1>Tussenstand</h1>
+    </header>
+    <div class="logo-container">
+      <img src="images/logo.png" alt="Festival Logo">
+    <main>
+        <div id="scoreboard-container">
+            <h2>Scorebord</h2>
+            <table id="scoreboard">
+                <thead>
+                    <tr>
+                        <th>Naam</th>
+                        <th>Punten</th>
+                        <th>Acties</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Dynamische rijen worden hier toegevoegd -->
+                </tbody>
+            </table>
+            <form id="add-score-form">
+                <h3>Voeg Punten Toe</h3>
+                <label for="name">Naam:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="points">Punten:</label>
+                <input type="number" id="points" name="points" min="1" required>
+                <button type="submit">Toevoegen</button>
+            </form>
+        </div>
+    </main>
+    <div id="back-button-container">
+      <a href="agenda.html" class="back-button">Terug naar Agenda</a>
+  </div>
+    <footer>
+        <p>&copy; 2025 Tussenstand - Gecreëerd Roan Hassan, S-Team vertegenwoordiger</p>
+    </footer>
+    <script src="scoreboard.js"></script>
+</body>
+</html>
