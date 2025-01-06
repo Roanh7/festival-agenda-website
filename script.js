@@ -106,3 +106,14 @@
             document.getElementById("player-stats-popup").classList.add("hidden");
         });
     });
+
+    // Selecteer alle <tr> elementen in de tabel (behalve de <thead>)
+const festivalRows = document.querySelectorAll('table tbody tr');
+
+// Loop door elke rij en luister naar 'click' events
+festivalRows.forEach((row) => {
+  row.addEventListener('click', () => {
+    // Toggle de geselecteerde klasse
+    row.classList.toggle('selected-festival');
+  });
+});

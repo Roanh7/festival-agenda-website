@@ -529,3 +529,13 @@ body {
 .close-popup-btn:hover {
     background-color: #45a049;
 }
+
+/* Klasse voor geselecteerde festivals */
+.selected-festival {
+    background-color: #d5d6a5 !important; /* Een zachte groene tint */
+    color: #333; /* Eventueel tekstkleur iets donkerder laten */
+}
+
+table tr {
+    cursor: pointer;
+  }
