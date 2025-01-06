@@ -138,52 +138,143 @@ table {
   min-width: 1000px; /* Stel een minimale breedte in voor de tabel */
 }
 
+/* Algemene veld styling */
 .field-container {
     text-align: center;
     margin: 2rem auto;
-    width: 90%; 
-    max-width: 1200px;
+    width: 90%;
+    max-width: 800px;
 }
+
 .field-title {
     font-size: 1.5rem;
     font-weight: bold;
     margin-bottom: 1rem;
     color: #333;
+    text-transform: uppercase;
 }
+
 .field {
-    position: relative;
+    position: relative; /* Essentieel voor positionering van spelers en namen */
     width: 100%;
-    height: 400px;
-    background-color: #228B22;
-    border: 5px solid white;
-    border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    max-width: 600px;
+    height: 800px;
+    background: linear-gradient(to bottom, #228B22, #006400); /* Grasgroen */
+    border: 5px solid white; /* Witte veldlijnen */
+    border-radius: 15px;
+    margin: 0 auto;
+    overflow: hidden; /* Zorg dat alles binnen het veld blijft */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Mooie schaduw */
 }
+
+/* Middenlijn */
+.field::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    transform: translateY(-50%);
+}
+
+/* Cirkel in het midden */
+.field::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 150px;
+    height: 150px;
+    border: 2px solid white;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Speler styling */
 .player {
     position: absolute;
-    width: 50px;
-    height: 50px;
-    background-color: red;
-    border-radius: 50%;
-    color: white;
+    width: 60px;
+    height: 60px;
+    background-color: #4CAF50; /* Spelergroen */
+    border: 2px solid white; /* Witte rand */
+    border-radius: 50%; /* Maak het een cirkel */
+    color: white; /* Witte tekst */
     text-align: center;
-    line-height: 50px;
+    line-height: 60px;
     font-weight: bold;
     font-size: 1.2rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Schaduw voor 3D-effect */
+    cursor: pointer;
+    z-index: 10; /* Zorg dat de spelers bovenop staan */
+    
+}
+
+.player:hover {
+    transform: scale(1.1); /* Zoom-effect bij hover */
+}
+
+/* Namen correct onder de spelers */
+/* Spelernaam styling */
+.player-container {
+    position: absolute;          /* De container bepaalt zelf waar hij op het veld staat */
+    width: 60px;
+    height: 80px;               /* wat extra ruimte onder de cirkel voor de naam */
+    text-align: center;         /* zorg dat alles in het midden blijft */
+    /* Plaatsing per positie hieronder via top/left */
+}
+
+/* Voorbeeldposities (zoals eerst in je .player stond) */
+.goalkeeper {
+    top: 85%;
+    left: 50%;
+    transform: translateX(-50%); 
+}
+
+.defender-left {
+    top: 65%;
+    left: 25%;
+    transform: translateX(-50%); 
 }
 .player-name {
     position: absolute;
-    text-align: center;
     width: 100px;
-    font-size: 0.9rem;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: bold;
     color: white;
-    transform: translate(-50%, 10px);
+    top: calc(100% + 5px); /* Plaats de naam onder de speler */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 5; /* Zorg dat de naam zichtbaar blijft */
 }
-.goalkeeper { top: 85%; left: 50%; }
-.defender-left { top: 65%; left: 25%; }
-.defender-right { top: 65%; left: 75%; }
-.midfielder { top: 45%; left: 50%; }
-.striker { top: 15%; left: 50%; }
+
+/* Specifieke posities voor spelers */
+.goalkeeper {
+    top: 85%;
+    left: 50%;
+}
+
+.defender-left {
+    top: 65%;
+    left: 25%;
+}
+
+.defender-right {
+    top: 65%;
+    left: 75%;
+}
+
+.midfielder {
+    top: 45%;
+    left: 50%;
+}
+
+.striker {
+    top: 15%;
+    left: 50%;
+}
 
 .reviews-link-container {
     text-align: center;
@@ -319,4 +410,122 @@ body {
   width: 90%;
   margin: 1rem auto;
   max-width: 600px;
+}
+
+/* Popup styling */
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5); /* Donkere overlay */
+    z-index: 1000;
+}
+
+.popup.hidden {
+    display: none; /* Popup verbergen */
+}
+
+.popup-content {
+    background-color: #f4f4f4; /* Lichte achtergrond */
+    border: 3px solid #4CAF50; /* Groen van de spelers */
+    border-radius: 15px;
+    padding: 2rem;
+    max-width: 450px;
+    width: 90%;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    color: #333;
+}
+
+/* Sluitknop */
+.close-popup-btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.close-popup-btn:hover {
+    background-color: #45a049;
+    transform: scale(1.1); /* Zoom-effect */
+}
+
+/* Skills sectie */
+.skills-section h3 {
+    font-size: 1.5rem;
+    color: #4CAF50; /* Consistente groene kleur */
+    font-weight: bold;
+    text-decoration: underline;
+    margin-bottom: 1rem;
+}
+
+.rating-section {
+    flex: 1;
+}
+
+.rating-box {
+    border: 2px solid black;
+    width: 80px;
+    height: 80px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rating-label {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.info-section {
+    flex: 1;
+    text-align: left;
+}
+
+.skills-section {
+    margin: 1.5rem 0;
+}
+
+.skills-section h3 {
+    font-size: 1.2rem;
+    color: #4CAF50; /* Groen van de site */
+    font-weight: bold;
+    text-decoration: underline;
+    margin-bottom: 0.5rem;
+}
+
+.skills-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.skills-section li {
+    margin: 0.3rem 0;
+    font-size: 1rem;
+    color: #333;
+}
+
+.close-popup-btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.close-popup-btn:hover {
+    background-color: #45a049;
 }

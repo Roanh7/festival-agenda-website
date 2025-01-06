@@ -56,3 +56,53 @@
     // Update de klok elke seconde
     setInterval(updateCountdown, 1000);
     updateCountdown(); // Direct uitvoeren bij laden
+
+    document.addEventListener("DOMContentLoaded", () => {
+        const playerStats = {
+            "Roan": { position: "Keeper", age: 23, rating: "Rating: 82", skills: ["Vibes brengen", "Communicatie", "Voorraad regelen"] },
+            "Muc": { position: "Verdediger", age: 32, rating: "Rating: 90", skills: ["TikTok famous", "Capsuleren", "Overzicht"] },
+            "Rick": { position: "Verdediger", age: 26, rating: "Rating: 80", skills: ["1-op-1 verdedigen", "Vibes brengen", "Jokes maken","Houd van grote billen"] },
+            "Chip": { position: "Middenvelder", age: 31, rating: "Rating: 88", skills: [ "Uithoudingsvermogen", "Teamleider", "Driver"] },
+            "Jef": { position: "Aanvaller", age: 29, rating: "Rating:???", skills: ["CHEATCODE ACTIVATED", "glow in the dark ogen"] },
+        };
+    
+        const showPopup = (playerName) => {
+            const stats = playerStats[playerName];
+    
+            if (stats) {
+                document.getElementById("player-name").textContent = playerName;
+                document.getElementById("player-age").textContent = stats.age;
+                document.querySelector(".rating-label").textContent = stats.rating;
+    
+                const skillsList = document.getElementById("player-skills");
+                skillsList.innerHTML = ""; // Reset de skills
+                stats.skills.forEach(skill => {
+                    const li = document.createElement("li");
+                    li.textContent = skill;
+                    skillsList.appendChild(li);
+                });
+    
+                document.getElementById("player-stats-popup").classList.remove("hidden");
+            }
+        };
+    
+        document.querySelectorAll(".player").forEach(player => {
+            player.addEventListener("click", () => {
+                const playerName = player.nextElementSibling?.textContent.trim();
+                if (playerName) {
+                    showPopup(playerName);
+                }
+            });
+        });
+    
+        document.querySelectorAll(".player-name").forEach(name => {
+            name.addEventListener("click", () => {
+                const playerName = name.textContent.trim();
+                showPopup(playerName);
+            });
+        });
+    
+        document.getElementById("close-popup").addEventListener("click", () => {
+            document.getElementById("player-stats-popup").classList.add("hidden");
+        });
+    });

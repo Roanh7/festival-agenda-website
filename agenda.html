@@ -6,7 +6,7 @@
     <title>Festival Agenda 2025</title>
     <link rel="stylesheet" href="agenda.css">
 </head>
-</head>
+
 <body>
     <header>
         <h1>Festival Agenda 2025</h1>
@@ -26,8 +26,6 @@
             <span id="seconds">00</span>s
         </div>
     </div>
-
-    <script src="script.js"></script>
 
     <main>
     <div class="table-container">
@@ -228,21 +226,62 @@
             </tbody>
         </table>
     </div>
-        <div class="field-container">
-            <div class="field-title">S-TEAM Opstelling</div>
-            <div class="field">
-                <div class="player goalkeeper">1</div>
-                <div class="player-name" style="top: 92%; left: 50%;">Roan</div>
-                <div class="player defender-left">3</div>
-                <div class="player-name" style="top: 72%; left: 25%;">Muc</div>
-                <div class="player defender-right">5</div>
-                <div class="player-name" style="top: 72%; left: 75%;">Rick</div>
-                <div class="player midfielder">10</div>
-                <div class="player-name" style="top: 52%; left: 50%;">Chip</div>
-                <div class="player striker">9</div>
-                <div class="player-name" style="top: 22%; left: 50%;">Jef</div>
+    <div class="field-container">
+        <div class="field-title">S-TEAM Opstelling</div>
+        <div class="field">
+            <div class="player-container goalkeeper">
+                <div class="player">1</div>
+                <div class="player-name">Roan</div>
+            </div>
+        
+            <div class="player-container defender-left">
+                <div class="player">3</div>
+                <div class="player-name">Muc</div>
+            </div>
+        
+            <div class="player-container defender-right">
+                <div class="player">5</div>
+                <div class="player-name">Rick</div>
+            </div>
+            
+            <div class="player-container midfielder">
+                <div class="player">10</div>
+                <div class="player-name">Chip</div>
+            </div>
+        
+            <div class="player-container striker">
+                <div class="player">9</div>
+                <div class="player-name">Jef</div>
             </div>
         </div>
+       <!-- Player Stats Popup -->
+<div id="player-stats-popup" class="popup hidden">
+    <div class="popup-overlay"></div>
+    <div class="popup-content">
+        <div class="player-stats">
+            <div class="rating-section">
+                <div class="rating-box">
+                    <p class="rating-label">Rating</p>
+                </div>
+            </div>
+            <div class="info-section">
+                <p><strong>Naam:</strong> <span id="player-name">Roan</span></p>
+                <p><strong>Leeftijd:</strong> <span id="player-age">23</span></p>
+            </div>
+        </div>
+        <div class="skills-section">
+            <h3>Skills:</h3>
+            <ul id="player-skills">
+                <li>Skill 1</li>
+                <li>Skill 2</li>
+                <li>Skill 3</li>
+                <li>Skill 4</li>
+            </ul>
+        </div>
+        <button id="close-popup" class="close-popup-btn">Terug</button>
+    </div>
+</div>
+</div>
         <div class="bank-container">
             <h3 class="bank-title">Bank</h3>
             <ul class="bank-list">
@@ -277,4 +316,5 @@
         </footer>
     </footer>
 </body>
+<script src="script.js"></script>
 </html
