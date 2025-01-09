@@ -5,6 +5,22 @@
         { name: "DGTL", date: "2025-04-18" },
         { name: "Free your mind Kingsday", date: "2025-04-26" },
         { name: "Loveland Kingsday", date: "2025-04-26" },
+        { name: "Verbond", date: "2025-05-05" },
+        { name: "Awakenings Upclose", date: "2025-05-17" },
+        { name: "Soenda", date: "2025-05-31" },
+        { name: "Open Air", date: "2025-06-07" },
+        { name: "909", date: "2025-06-08" },
+        { name: "Free Your Mind", date: "2025-06-08" },
+        { name: "Mystic Garden Festival", date: "2025-06-14" },
+        { name: "Awakenings Festival", date: "2025-07-11" },
+        { name: "Tomorrowland", date: "2025-07-18" },
+        { name: "Mysteryland", date: "2025-07-22" },
+        { name: "No Art", date: "2025-07-26" },
+        { name: "Loveland", date: "2025-08-09" },
+        { name: "Strafwerk", date: "2025-08-16" },
+        { name: "Latin Village", date: "2025-08-17" },
+        { name: "Parels van de stad", date: "2025-09-13" },
+        { name: "Into the woods", date: "2025-09-19" },
         // Voeg hier andere festivals toe
     ];
 
@@ -59,9 +75,9 @@
 
     document.addEventListener("DOMContentLoaded", () => {
         const playerStats = {
-            "Roan": { position: "Keeper", age: 23, rating: "Rating: 82", skills: ["Vibes brengen", "Communicatie", "Voorraad regelen"] },
+            "MD": { position: "Keeper", age: 28, rating: "Rating: 82", skills: ["Vibes brengen", "Communicatie", "Voorraad regelen"] },
             "Muc": { position: "Verdediger", age: 32, rating: "Rating: 90", skills: ["TikTok famous", "Capsuleren", "Overzicht", "Is een arts (alleen na 23:00)"] },
-            "Rick": { position: "Verdediger", age: 26, rating: "Rating: 80", skills: ["1-op-1 verdedigen", "Vibes brengen", "Jokes maken","Houd van grote billen"] },
+            "Trim": { position: "Verdediger", age: 33, rating: "Rating: 80", skills: ["1-op-1 verdedigen", "Vibes brengen", "Jokes maken",] },
             "Chip": { position: "Middenvelder", age: 31, rating: "Rating: 88", skills: [ "Uithoudingsvermogen", "Teamleider", "Driver"] },
             "Jef": { position: "Aanvaller", age: 29, rating: "Rating:???", skills: ["CHEATCODE ACTIVATED", "glow in the dark ogen"] },
         };
@@ -117,3 +133,4 @@ festivalRows.forEach((row) => {
     row.classList.toggle('selected-festival');
   });
 });
+
