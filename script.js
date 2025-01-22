@@ -75,9 +75,9 @@
 
     document.addEventListener("DOMContentLoaded", () => {
         const playerStats = {
-            "MD": { position: "Keeper", age: 28, rating: "Rating: 82", skills: ["Vibes brengen", "Communicatie", "Voorraad regelen"] },
+            "Roan": { position: "Keeper", age: 23, rating: "Rating: 82", skills: ["Vibes brengen", "Communicatie", "Voorraad regelen"] },
             "Muc": { position: "Verdediger", age: 32, rating: "Rating: 90", skills: ["TikTok famous", "Capsuleren", "Overzicht", "Is een arts (alleen na 23:00)"] },
-            "Trim": { position: "Verdediger", age: 33, rating: "Rating: 80", skills: ["1-op-1 verdedigen", "Vibes brengen", "Jokes maken",] },
+            "Rick": { position: "Verdediger", age: 33, rating: "Rating: 80", skills: ["1-op-1 verdedigen", "Vibes brengen", "Jokes maken",] },
             "Chip": { position: "Middenvelder", age: 31, rating: "Rating: 88", skills: [ "Uithoudingsvermogen", "Teamleider", "Driver"] },
             "Jef": { position: "Aanvaller", age: 29, rating: "Rating:???", skills: ["CHEATCODE ACTIVATED", "glow in the dark ogen"] },
         };
