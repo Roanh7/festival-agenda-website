@@ -98,4 +98,34 @@ main {
     display: block; 
 }
 
+/* ---- NAVIGATIEBALK ---- */
+.nav-bar {
+    background-color: #4CAF50; /* groene achtergrond voor de navigatie */
+    width: 100%;
+    /* je kunt eventueel padding toevoegen:
+       padding: 0.5rem 0; */
+}
+.nav-bar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;               /* Plaats de items naast elkaar */
+    justify-content: center;     /* Horizontaal centreren */
+}
+.nav-bar li {
+    margin: 0; /* Eventueel kun je hier wat ruimte toevoegen */
+}
+.nav-bar a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 1rem 1.5rem;       /* Ruimte binnen de knoppen */
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+.nav-bar a:hover {
+    background-color: #45a049;  /* Iets donkere/groene tint bij hover */
+}
+
+
 
