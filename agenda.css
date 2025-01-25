@@ -11,29 +11,30 @@ html, body {
     color: #333;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 header {
+    margin: 0;
+    padding: 1rem 0; /* Als je deze 1rem wilt houden, prima, maar let op de extra ruimte. */
     background: #4CAF50;
-    color: white;
     text-align: center;
-    padding: 1rem 0;
     font-size: 2rem;
-    width: 100%; 
+    color: #fff;
 }
 
 /* Logo-container */
 .logo-container {
     width: 100%;
     max-width: 100%;
-    margin: 0;
-    padding: 0; /* indien gewenst, ook weglaten */
-}
-
-.logo-container img {
-    width: 100%;
-    height: auto;
-    display: block; /* verwijdert eventuele whitespace onder afbeeldingen */
-}
+    margin: 0;      /* GEEN extra marge rondom de container */
+    padding: 0;
+    background-color: transparent;  /* Of dezelfde kleur als de body/header */
+  }
+  .logo-container img {
+    display: block;  /* Verwijdert eventuele inline-afbeelding-spatiëring */
+    width: 100%;     /* Past zich aan de containerbreedte aan */
+    height: auto;    /* Houdt de verhoudingen in stand */
+  }
 
 /* ---- NAVIGATIEBALK ---- */
 .nav-bar {
