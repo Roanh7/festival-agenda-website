@@ -8,8 +8,8 @@
         { name: "Verbond", date: "2025-05-05" },
         { name: "Awakenings Upclose", date: "2025-05-17" },
         { name: "Soenda", date: "2025-05-31" },
-        { name: "Open Air", date: "2025-06-07" },
-        { name: "909", date: "2025-06-08" },
+        { name: "909", date: "2025-06-07" },
+        { name: "Open Air", date: "2025-06-08" },
         { name: "Free Your Mind", date: "2025-06-08" },
         { name: "Mystic Garden Festival", date: "2025-06-14" },
         { name: "Awakenings Festival", date: "2025-07-11" },
@@ -39,7 +39,7 @@
 
         // Als er geen toekomstige festivals zijn, toon een bericht
         if (!nextFestival) {
-            document.getElementById("festival-name").textContent = "Geen aankomende festivals";
+            document.getElementById("festival-name").textContent = "END OF SEASON";
             document.getElementById("countdown").textContent = "";
             return;
         }
@@ -73,6 +73,7 @@
     setInterval(updateCountdown, 1000);
     updateCountdown(); // Direct uitvoeren bij laden
 
+    //players stats
     document.addEventListener("DOMContentLoaded", () => {
         const playerStats = {
             "Roan": { position: "Keeper", age: 23, rating: "Rating: 82", skills: ["Vibes brengen", "Communicatie", "Voorraad regelen"] },
