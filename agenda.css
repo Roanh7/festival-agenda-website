@@ -174,19 +174,6 @@ tr:hover {
     transform: translateY(-50%);
 }
 
-/* Cirkel in het midden */
-.field::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 150px;
-    height: 150px;
-    border: 2px solid white;
-    border-radius: 50%;
-    transform: translate(-50%, -50%);
-}
-
 /* Speler-icoontjes */
 .player {
     position: absolute;
@@ -309,7 +296,7 @@ tr:hover {
     background-color: #45a049;
 }
 
-/* ====================== POPUP (optioneel) ====================== */
+/* ====================== POPUP ====================== */
 .popup {
     position: fixed;
     top: 0;
@@ -351,15 +338,9 @@ tr:hover {
     transform: scale(1.1);
 }
 
-/* ====================== TABEL-RIJ KLIKBAAR (optioneel) ====================== */
+/* ====================== TABEL-RIJ KLIKBAAR ====================== */
 table tr {
     cursor: pointer;
-}
-
-/* Indien je een geselecteerde festivalrij wilt markeren */
-.selected-festival {
-    background-color: #d5d6a5 !important;
-    color: #333;
 }
 
 /* ====================== FOOTER ====================== */
