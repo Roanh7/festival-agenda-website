@@ -174,7 +174,7 @@
         "No Art": "https://www.noartfestival.com",
         "Loveland": "https://www.loveland.nl",
         "Latin Village": "https://www.latinvillage.nl",
-        "Strafwerk": "https://www.strafwerkfestival.nl",
+        "Strafwerk": "https://www.strafwerk.org",
         "Parels van de stad": "https://www.parelsvandestad.nl",
         "Into the woods": "https://www.intothewoodsfestival.nl"
     };
