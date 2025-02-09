@@ -1,11 +1,10 @@
-/* ========== BASISRESET ========== */
+/* ====================== RESET & BASIS ====================== */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* ========== BODY & STRUCTUUR ========== */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -14,107 +13,55 @@ body {
     color: #333;
 }
 
-/* Header */
+/* ====================== HEADER ====================== */
 header {
     background: #4CAF50;
     color: white;
     text-align: center;
     padding: 1rem 0;
+    /* Geen extra margin hier om de pagina volledig te laten aansluiten */
 }
 
-/* Hoofdcontainer (optioneel):
-   Als je een main wilt gebruiken voor
-   algemene layout, pas hem gerust aan. */
-main {
-    width: 90%;
-    max-width: 1200px; 
-    margin: 2rem auto;
-}
-
-/* ========== LOGO-CONTAINER ========== */
+/* ====================== LOGO-CONTAINER (exact als reviews) ====================== */
 .logo-container {
     text-align: center;
-    margin: 0;                  /* Geen extra marges rondom de container */
-    background-color: #fff;     /* Achtergrond wit of transparant, zoals in reviews */
+    margin: 0;               /* Geen marges */
+    background-color: #fff;  /* Exact zoals reviews-pagina */
 }
 .logo-container img {
-    width: 100%;    /* Volledige breedte van de container */
-    height: auto;   /* Houd proporties in stand */
-    display: block; /* Verwijdert eventuele inline-afbeelding-afstand */
+    width: 100%;
+    height: auto;
+    display: block;          /* Voorkomt inline gap onder de afbeelding */
 }
 
-/* ========== NAVIGATIEBALK ========== */
+/* ====================== NAVIGATIEBALK ====================== */
 .nav-bar {
-    background-color: #4CAF50;  /* Groene achtergrond voor de navigatie */
+    background-color: #4CAF50; 
     width: 100%;
 }
 .nav-bar ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    display: flex;               /* Plaats de items naast elkaar */
-    justify-content: center;     /* Horizontaal centreren */
+    display: flex;           
+    justify-content: center; 
 }
 .nav-bar li {
-    margin: 0; /* Eventueel kun je hier wat extra spacing toevoegen */
+    margin: 0;
 }
 .nav-bar a {
     display: block;
     color: white;
     text-decoration: none;
-    padding: 1rem 1.5rem;       /* Ruimte binnen de knoppen */
+    padding: 1rem 1.5rem;  
     font-weight: bold;
     transition: background-color 0.3s ease;
 }
 .nav-bar a:hover {
-    background-color: #45a049;  /* Donkerdere groene tint bij hover */
+    background-color: #45a049; 
 }
 
-/* ========== TABEL & AGENDA-ELEMENTEN ========== */
-
-/* Container voor je agenda-tabel */
-.table-container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 2rem auto;      /* Ruimte boven/onder */
-    overflow-x: auto;       /* Horizontaal scrollen indien nodig */
-    display: block;
-}
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-    min-width: 600px;
-}
-
-th, td {
-    border: 1px solid #ddd;
-    text-align: center;
-    padding: 0.8rem;
-    word-wrap: break-word; 
-}
-
-th {
-    background-color: #4CAF50;
-    color: white;
-}
-
-tr:nth-child(even) {
-    background-color: #f2f2f2;
-}
-tr:hover {
-    background-color: #ddd;
-}
-
-/* Voor de “highlight” rijen */
-.highlight-green {
-    background-color: #d4edda;
-}
-.highlight-yellow {
-    background-color: #fff3cd;
-}
-
-/* ========== COUNTDOWN-CONTAINER (optioneel) ========== */
+/* ====================== COUNTDOWN (optioneel, indien aanwezig) ====================== */
 #countdown-container {
     text-align: center;
     margin: 2rem auto;
@@ -135,7 +82,58 @@ tr:hover {
     font-weight: bold;
 }
 
-/* ========== S-TEAM VELD ========== */
+/* ====================== TABLE & AGENDA ====================== */
+.table-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 2rem auto;      /* Ruimte boven/onder */
+    overflow-x: auto;       /* Scroll als de tabel breder is dan de container */
+    display: block;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 600px; 
+}
+
+th, td {
+    border: 1px solid #ddd;
+    text-align: center;
+    padding: 0.8rem;
+    word-wrap: break-word;
+}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+tr:hover {
+    background-color: #ddd;
+}
+
+/* Highlight-kleuren */
+.highlight-green {
+    background-color: #d4edda;
+}
+.highlight-yellow {
+    background-color: #fff3cd;
+}
+
+.festival-link {
+    color: #060606;
+    text-decoration: underline;
+}
+
+.festival-link:hover {
+    text-decoration: underline;
+}
+
+/* ====================== VELD (S-TEAM) ====================== */
 .field-container {
     text-align: center;
     margin: 2rem auto;
@@ -152,7 +150,7 @@ tr:hover {
 }
 
 .field {
-    position: relative; 
+    position: relative;
     width: 100%;
     max-width: 600px;
     height: 800px;
@@ -189,7 +187,7 @@ tr:hover {
     transform: translate(-50%, -50%);
 }
 
-/* Speler styling */
+/* Speler-icoontjes */
 .player {
     position: absolute;
     width: 60px;
@@ -207,17 +205,16 @@ tr:hover {
     z-index: 10;
 }
 .player:hover {
-    transform: scale(1.1); 
+    transform: scale(1.1);
 }
 
-/* Container voor speler + naam */
+/* Omhulsel voor speler en naam */
 .player-container {
     position: absolute;
     width: 60px;
     height: 80px; 
     text-align: center;
 }
-/* Spelernaam */
 .player-name {
     position: absolute;
     width: 100px;
@@ -231,7 +228,7 @@ tr:hover {
     z-index: 5;
 }
 
-/* Posities (voorbeeld) */
+/* Posities - voorbeeld */
 .goalkeeper {
     top: 85%;
     left: 50%;
@@ -258,12 +255,12 @@ tr:hover {
     transform: translateX(-50%);
 }
 
-/* ========== BANK ========== */
+/* ====================== BANK ====================== */
 .bank-container {
     text-align: center;
     margin: 2rem auto;
     width: 90%;
-    max-width: 600px; 
+    max-width: 600px;
 }
 .bank-title {
     font-size: 1.5rem;
@@ -282,7 +279,7 @@ tr:hover {
     color: #555;
     margin: 0.5rem 0;
     padding: 0.5rem;
-    background-color: #f9f9f9;
+    background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 5px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
@@ -291,7 +288,7 @@ tr:hover {
     background-color: #f2f2f2;
 }
 
-/* ========== DOWNLOAD LINK ========== */
+/* ====================== DOWNLOAD-LINK ====================== */
 .download-link-container {
     text-align: center;
     margin: 1rem auto;
@@ -312,7 +309,7 @@ tr:hover {
     background-color: #45a049;
 }
 
-/* ========== POPUP (OPTIONEEL) ========== */
+/* ====================== POPUP (optioneel) ====================== */
 .popup {
     position: fixed;
     top: 0;
@@ -354,12 +351,27 @@ tr:hover {
     transform: scale(1.1);
 }
 
-/* ========== RESPONSIVITEIT MEDIA QUERIES ========== */
+/* ====================== TABEL-RIJ KLIKBAAR (optioneel) ====================== */
+table tr {
+    cursor: pointer;
+}
+
+/* Indien je een geselecteerde festivalrij wilt markeren */
+.selected-festival {
+    background-color: #d5d6a5 !important;
+    color: #333;
+}
+
+/* ====================== FOOTER ====================== */
+footer {
+    text-align: center;
+    margin: 2rem 0;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* ====================== RESPONSIVE BREAKPOINTS ====================== */
 @media (max-width: 768px) {
-    main {
-        width: 95%;
-        margin: 1rem auto;
-    }
     .table-container {
         width: 95%;
         margin: 1rem auto;
@@ -368,9 +380,7 @@ tr:hover {
         width: 95%;
     }
 }
-
 @media (max-width: 480px) {
-    /* evt. verdere aanpassingen */
     #countdown-container {
         font-size: 0.9rem;
         padding: 0.5rem;
@@ -381,22 +391,4 @@ tr:hover {
     #festival-name {
         font-size: 1rem;
     }
-}
-
-/* ========== TABEL-RIJ KLIKBAAR (OPTIONEEL) ========== */
-table tr {
-    cursor: pointer;
-}
-/* Klasse voor geselecteerde festivals (optioneel) */
-.selected-festival {
-    background-color: #d5d6a5 !important;
-    color: #333;
-}
-
-/* ========== FOOTER ========== */
-footer {
-    text-align: center;
-    margin: 2rem 0;
-    font-size: 0.9rem;
-    color: #666;
 }

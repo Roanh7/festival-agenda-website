@@ -134,3 +134,40 @@ festivalRows.forEach((row) => {
     row.classList.toggle('selected-festival');
   });
 });
+
+// Object met festivalnamen en bijbehorende websites
+const festivalLinks = {
+    "Wavy": "https://www.wavyfestival.nl",
+    "DGTL": "https://www.dgtl.nl",
+    "Free your mind Kingsday": "https://www.freeyourmindfestival.nl",
+    "Loveland Kingsday": "https://www.loveland.nl",
+    "Verbond": "https://www.verbondfestival.nl",
+    "Awakenings Upclose": "https://www.awakenings.nl",
+    "Soenda": "https://www.soenda.com",
+    "909": "https://www.909festival.nl",
+    "Open Air": "https://www.amsterdamopenair.nl",
+    "Free Your Mind": "https://www.freeyourmindfestival.nl",
+    "Mystic Garden Festival": "https://www.mysticgardenfestival.nl",
+    "Awakenings Festival": "https://www.awakenings.nl",
+    "Tomorrowland": "https://www.tomorrowland.com",
+    "Mysteryland": "https://www.mysteryland.com",
+    "No Art": "https://www.noartfestival.com",
+    "Loveland": "https://www.loveland.nl",
+    "Latin Village": "https://www.latinvillage.nl",
+    "Strafwerk": "https://www.strafwerkfestival.nl",
+    "Parels van de stad": "https://www.parelsvandestad.nl",
+    "Into the woods": "https://www.intothewoodsfestival.nl"
+};
+
+// Event listener voor de festival links
+document.querySelectorAll(".festival-link").forEach(link => {
+    link.addEventListener("click", event => {
+        event.preventDefault(); // Voorkom standaard gedrag
+        const festivalName = event.target.dataset.name;
+        if (festivalLinks[festivalName]) {
+            window.open(festivalLinks[festivalName], "_blank");
+        } else {
+            alert("Website niet gevonden voor " + festivalName);
+        }
+    });
+});
