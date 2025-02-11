@@ -7,11 +7,13 @@
         { name: "Loveland Kingsday", date: "2025-04-26" },
         { name: "Verbond", date: "2025-05-05" },
         { name: "Awakenings Upclose", date: "2025-05-17" },
+        { name: "Toffler", date: "2025-05-31" },
         { name: "Soenda", date: "2025-05-31" },
         { name: "909", date: "2025-06-07" },
         { name: "Open Air", date: "2025-06-08" },
         { name: "Free Your Mind", date: "2025-06-08" },
         { name: "Mystic Garden Festival", date: "2025-06-14" },
+        { name: "Vunzige Deuntjes", date: "2025-07-05" },
         { name: "Awakenings Festival", date: "2025-07-11" },
         { name: "Tomorrowland", date: "2025-07-18" },
         { name: "Mysteryland", date: "2025-07-22" },
@@ -23,6 +25,7 @@
         { name: "Into the woods", date: "2025-09-19" },
         // Voeg hier andere festivals toe
     ];
+
 
     function updateCountdown() {
         const now = new Date();
@@ -173,9 +176,11 @@
         "Mysteryland": "https://www.mysteryland.com",
         "No Art": "https://www.noartfestival.com",
         "Loveland": "https://www.loveland.nl",
+        "Vunzige Deuntjes": "https://www.vunzigedeuntjes.nl",
         "Latin Village": "https://www.latinvillage.nl",
-        "Strafwerk": "https://www.strafwerk.org",
+        "Strafwerk": "https://www.strafwerkfestival.nl",
         "Parels van de stad": "https://www.parelsvandestad.nl",
+        "Toffler": "https://tofflerfestival.nl",
         "Into the woods": "https://www.intothewoodsfestival.nl"
     };
     
@@ -191,3 +196,5 @@
             }
         });
     });
+
+    
