@@ -164,7 +164,7 @@
         "DGTL": "https://www.dgtl.nl",
         "Free your mind Kingsday": "https://www.freeyourmindfestival.nl",
         "Loveland Kingsday": "https://www.loveland.nl",
-        "Verbond": "https://www.verbondfestival.nl",
+        "Verbond": "https://hetamsterdamsverbond.nl",
         "Awakenings Upclose": "https://www.awakenings.nl",
         "Soenda": "https://www.soenda.com",
         "909": "https://www.909festival.nl",
